@@ -10,9 +10,10 @@ The Memes App is an Android application that fetches random memes from the Reddi
 
 ## Screenshots
 
-![Memes App Screenshot 1](screenshot1.jpg)
-![Memes App Screenshot 2](screenshot2.jpg)
-![Memes App Screenshot 3](screenshot3.jpg)
+<!-- Resize images using HTML width attribute -->
+<img src="screenshot1.jpg" width="200" alt="Memes App Screenshot 1">
+<img src="screenshot2.jpg" width="200" alt="Memes App Screenshot 2">
+<img src="screenshot3.jpg" width="200" alt="Memes App Screenshot 3">
 
 ## Technologies Used
 
@@ -26,7 +27,7 @@ The Memes App is an Android application that fetches random memes from the Reddi
 1. Clone the repository to your local machine.
 
     ```bash
-    git clone https://github.com/your-username/memes-app.git
+    git clone https://github.com/Patil-Kalpak/Random-memes-app.git
     ```
 
 2. Open the project in Android Studio.
@@ -45,20 +46,8 @@ The Memes App is an Android application that fetches random memes from the Reddi
 
 If you want to contribute to this project, feel free to fork the repository and submit a pull request. Contributions are welcome!
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- Thanks to Reddit for providing the API used in this project.
-- [Volley Library](https://developer.android.com/training/volley) for making network requests.
-- [Glide Library](https://github.com/bumptech/glide) for image loading.
-
-## Contact
-
-If you have any questions or suggestions, feel free to contact the project maintainer:
-
-Your Name  
-Your Email  
-[Your GitHub Profile](https://github.com/your-username)
+Kalpak Patil  
+kalpakpatil131@gmail.com  
+[Your GitHub Profile](https://github.com/Patil-Kalpak)
