@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        Toast.makeText(this,"If the meme doesn't load, try pressing Next!!",Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"If the meme doesn't load, try pressing Next Button!",Toast.LENGTH_LONG).show()
 
         load_memes()
 
