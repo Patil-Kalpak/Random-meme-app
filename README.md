@@ -50,4 +50,4 @@ If you want to contribute to this project, feel free to fork the repository and 
 
 Kalpak Patil  
 kalpakpatil131@gmail.com  
-[Your GitHub Profile](https://github.com/Patil-Kalpak)
+[Patil-Kalpak](https://github.com/Patil-Kalpak)
