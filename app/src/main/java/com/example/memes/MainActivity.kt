@@ -2,8 +2,6 @@ package com.example.memes
 
 import android.content.Intent
 import android.os.Bundle
-
-
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -14,15 +12,16 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
+import java.util.ArrayList
 
 
 class MainActivity : AppCompatActivity() {
 
-    private var loadedMemeUrls = HashSet<String>()
+    private var loadedMemeUrls = ArrayList<String>() // to save the already loaded meme urls
 
 
 
-    private var CurrentMemeUrl : String = ""
+    private var CurrentMemeUrl : String = "" // to store url of current meme
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,12 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this,"If the meme doesn't load, try pressing Next Button!",Toast.LENGTH_LONG).show()
 
-        load_memes()
+        load_memes() // loading the first meme
 
 
         val buttonShare : Button = findViewById(R.id.share_button)
 
-        buttonShare.setOnClickListener {
+        buttonShare.setOnClickListener { // implementing share button
 
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         val buttonNext : Button = findViewById(R.id.next_button)
 
         buttonNext.setOnClickListener {
-                load_memes()
+                load_memes() // loading next meme
         }
 
     }
@@ -66,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         val img : ImageView = findViewById(R.id.meme_image)
         img.visibility = View.GONE
 
-        val queue = Volley.newRequestQueue(this)
+
         val url = "https://meme-api.com/gimme"
         // Request a string response from the provided URL.
 
@@ -89,11 +88,14 @@ class MainActivity : AppCompatActivity() {
                 }
 
             },
-            {})
+            {
+                //nothing call the function again
+                load_memes()
+            })
 
 
         // Add the request to the RequestQueue.
-        queue.add(JSON_request)
+        MySingleton.getInstance(this).addToRequestQueue(JSON_request)
     }
 
 
